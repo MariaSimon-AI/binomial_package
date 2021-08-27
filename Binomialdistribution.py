@@ -47,7 +47,11 @@ class Binomial(Distribution):
         #               farther down in the code starting in line 55.
         #               The init function can get access to these methods via the self
         #               variable.
-        pass
+        self.n = size
+        self.p = prob
+
+        Distribution.__init__(self, self.calculate_mean(), self.calculate_stdev())
+
 
     def calculate_mean(self):
 
@@ -238,7 +242,7 @@ class Binomial(Distribution):
 
         """
 
-try:
+        try:
             assert self.p == other.p, 'p values are not equal'
         except AssertionError as error:
             raise
@@ -265,8 +269,6 @@ try:
         #   When adding two binomial distributions, the p value remains the same
         #   The new n value is the sum of the n values of the two distributions.
 
-        pass
-
 
     def __repr__(self):
 
@@ -286,4 +288,5 @@ try:
         #       with the values replaced by whatever the actual distributions values are
         #       The method should return a string in the expected format
 
-        pass
+        return "mean {}, standard deviation {}, p {}, n {}".\
+        format(self.mean, self.stdev, self.p, self.n)
