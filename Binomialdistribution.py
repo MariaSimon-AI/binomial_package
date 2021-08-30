@@ -290,3 +290,4 @@ class Binomial(Distribution):
 
         return "mean {}, standard deviation {}, p {}, n {}".\
         format(self.mean, self.stdev, self.p, self.n)
+        
