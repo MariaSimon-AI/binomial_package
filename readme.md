@@ -6,7 +6,7 @@ Inside the folder called 4a_binomial_package, there is another folder and these 
 * setup.py, a file needed for building Python packages with pip.
 * test.py unit tests to help debug the code.
 * numbers.txt and numbers_binomial.txt, which are data files used as part of the unit tests.
- Binomialdistribution.py includes the code.
+* Binomialdistribution.py includes the code.
 
 When you're ready to test out your code, follow these steps:
 1. pip** install your distributions package**. In the terminal, make sure you are in the 4a_binomial_package directory. If not, navigate there by entering the following at the command line:
